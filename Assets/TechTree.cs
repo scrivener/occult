@@ -15,12 +15,15 @@ public class TechTree : MonoBehaviour {
 
 	public int DarkSecrets = 0;
 	public int Capital = 0;
-
+	void Start () {
+		Global.PV= new PermVar();
+	}
 	void OnGUI () {
 		int TOOLTIP_X = (Screen.width / 2) - TOOLTIP_WIDTH/2;
 		int TOOLTIP_Y = (Screen.height / 2) + 100;
 
-		GUI.Label (new Rect (10, 10, 200, 50), "Capital: "+Capital+"\nDark Secrets: "+DarkSecrets);
+		GUI.Label (new Rect (10, 10, 200, 50), "Turn: " + PermVar.Turn + "\nCapital: " + PermVar.Capital +
+		           "(" + PermVar.CPT + ")" + "\nDark Secrets: " + PermVar.DarkSecrets + "(" + PermVar.DSPT + ")");
 		if (GUI.Button (new Rect (Screen.width-250,30,200,20), "Your Desk")) {
 			Application.LoadLevel("Main");
 		}

@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BuildingGUI.cs" />
+     <Compile Include="Assets\FactionGUI.cs" />
+     <Compile Include="Assets\Global.cs" />
      <Compile Include="Assets\MainGUI.cs" />
+     <Compile Include="Assets\PermVar.cs" />
      <Compile Include="Assets\TechTree.cs" />
      <Compile Include="Assets\TitleGUI.cs" />
   </ItemGroup>

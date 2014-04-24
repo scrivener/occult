@@ -3,11 +3,12 @@ using System.Collections;
 //This one is going to be pretty different from othe GUIs
 //Make a grid of labels
 public class BuildingGUI : MonoBehaviour {
-	public int DarkSecrets = 0;
-	public int Capital = 0;
-
+	void Start () {
+		Global.PV= new PermVar();
+	}
 	void OnGUI () {
-		GUI.Label (new Rect (10, 10, 200, 50), "Capital: "+Capital+"\nDark Secrets: "+DarkSecrets);
+		GUI.Label (new Rect (10, 10, 200, 50), "Turn: " + PermVar.Turn + "\nCapital: " + PermVar.Capital +
+		           "(" + PermVar.CPT + ")" + "\nDark Secrets: " + PermVar.DarkSecrets + "(" + PermVar.DSPT + ")");
 		GUI.Box (new Rect (Screen.width / 2 - 100, Screen.height / 2 - 100, 100,100), "");
 		GUI.Box (new Rect (Screen.width / 2, Screen.height / 2 - 100, 100,100), "");
 		GUI.Box (new Rect (Screen.width / 2 - 100, Screen.height / 2, 100,100), "");
